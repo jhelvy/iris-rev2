@@ -1,7 +1,7 @@
 # Parts list
 
 - [Iris Rev 2 PCBs](https://keeb.io/collections/keyboard-pcbs/products/iris-keyboard-split-ergonomic-keyboard) (Only Rev 4 is available now)
-- Arduino Pro Micros (1 [regular](https://keeb.io/collections/frontpage/products/pro-micro-5v-16mhz-arduino-compatible-atmega32u4) and 1 [elite-c](https://keeb.io/collections/frontpage/products/elite-c-usb-c-pro-micro-replacement-arduino-compatible-atmega32u4))
+- 2 Arduino Pro Micros (1 [regular](https://keeb.io/collections/frontpage/products/pro-micro-5v-16mhz-arduino-compatible-atmega32u4) and 1 [elite-c](https://keeb.io/collections/frontpage/products/elite-c-usb-c-pro-micro-replacement-arduino-compatible-atmega32u4))
 - 3D-printed case
 - [M3 nuts & bolts](https://www.amazon.com/gp/product/B072FKMYMF/) (for attaching the tenting legs)
 - 53 "Trash Panda" key switches (purchased from someone on Reddit's [mechmarket](https://www.reddit.com/r/mechmarket/))
@@ -13,7 +13,15 @@
 
 The case was 3D printed using [these Iris case files](https://github.com/wizarddata/Iris-Case/tree/master/High%20Profile) by [wizarddata](https://github.com/wizarddata) (thanks for making these available!). The parts were printed at at the [GWU Innovation Center](https://innovation.gwu.edu/gw-innovation-center) (shout out to Konstantin Mitic for all the help with this!).
 
-After printing the parts, I tried to create a "wood"-like look for the top pieces by attempting to stain them (staining plastic is tricky, but do-able). I started by coating the parts in a black stain to try and build some variation in the main color. After that dried (about 24 hours later), I coated the parts again in a stain-polyurethane blend by Midwax (I used [Olde Maple(https://www.minwax.com/wood-products/one-step-stain-and-finishes/minwax-polyshades)]). The polyurethane in the blend helped keep the color in place as it all dried. Since the back pieces were black plastic and therefore the stain color wouldn't work, I attempted to give them a metallic look by spray painting them with a silver colored ["Hammered Spray Paint"](https://www.rustoleum.com/product-catalog/consumer-brands/universal/universal-hammered-spray-paint) by Rust-Oleum.
+<img src="https://github.com/jhelvy/iris/raw/master/build_log/img-build/2-printed_pieces.jpg" width="600">
+
+After printing the parts, I tried to create a "wood"-like look for the top pieces by attempting to stain them (staining plastic is tricky, but do-able). I started by coating the parts in a black stain to try and build some variation in the main color. After that dried (about 24 hours later), I coated the parts again in a stain-polyurethane blend by Midwax (I used [Olde Maple(https://www.minwax.com/wood-products/one-step-stain-and-finishes/minwax-polyshades)]). The polyurethane in the blend helped keep the color in place as it all dried.
+
+Black stain layer | Stain-polyurethane coating
+------------------|----------------------------
+<img src="https://github.com/jhelvy/iris/raw/master/build_log/img-build/3-painting1.jpg" width="400"> | <img src="https://github.com/jhelvy/iris/raw/master/build_log/img-build/4-painting2.jpg" width="400">
+
+Since the back pieces were black plastic and therefore the stain color wouldn't work, I attempted to give them a metallic look by spray painting them with a silver colored ["Hammered Spray Paint"](https://www.rustoleum.com/product-catalog/consumer-brands/universal/universal-hammered-spray-paint) by Rust-Oleum.
 
 # Assembly
 
