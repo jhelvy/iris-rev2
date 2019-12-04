@@ -11,7 +11,7 @@
 
 # The case
 
-The case was 3D printed using [these Iris case files](https://github.com/wizarddata/Iris-Case/tree/master/High%20Profile) by [wizarddata](https://github.com/wizarddata) (thanks for making these available!). We printed the case parts at the [GWU Innovation Center](https://innovation.gwu.edu/gw-innovation-center) (shout out to Konstantin Mitic for all the help with this!).
+The case was 3D printed using [these Iris case files](https://github.com/wizarddata/Iris-Case/tree/master/High%20Profile) by [wizarddata](https://github.com/wizarddata) (thanks for making these available!). The parts were printed at at the [GWU Innovation Center](https://innovation.gwu.edu/gw-innovation-center) (shout out to Konstantin Mitic for all the help with this!).
 
 After printing the parts, I tried to create a "wood"-like look for the top pieces by attempting to stain them (staining plastic is tricky, but do-able). I started by coating the parts in a black stain to try and build some variation in the main color. After that dried (about 24 hours later), I coated the parts again in a stain-polyurethane blend by Midwax (I used [Olde Maple(https://www.minwax.com/wood-products/one-step-stain-and-finishes/minwax-polyshades)]). The polyurethane in the blend helped keep the color in place as it all dried. Since the back pieces were black plastic and therefore the stain color wouldn't work, I attempted to give them a metallic look by spray painting them with a silver colored ["Hammered Spray Paint"](https://www.rustoleum.com/product-catalog/consumer-brands/universal/universal-hammered-spray-paint) by Rust-Oleum.
 
