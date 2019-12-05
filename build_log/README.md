@@ -9,7 +9,7 @@
 - [TRRS Cable](https://keeb.io/products/trrs-cable?variant=8139444519018)
 - [Magnetic USB Cable](https://www.amazon.com/gp/product/B07QCWMQW9/)
 
-Here's the parts that came in the kit from Keebio:
+Here are the parts that came in the kit from Keebio:
 
 <img src="https://github.com/jhelvy/iris/raw/master/build_log/img-build/1-kit.jpg" width="400">
 
@@ -47,6 +47,10 @@ Major error | Switches soldered in place
 ------------------|----------------------------
 <img src="https://github.com/jhelvy/iris/raw/master/build_log/img-build/8-switches1.jpg" width="400"> | <img src="https://github.com/jhelvy/iris/raw/master/build_log/img-build/9-switches2.jpg" width="400">
 
+Both sides with soldering all done:
+
+<img src="https://github.com/jhelvy/iris/raw/master/build_log/img-build/finished_soldering.jpg" width="600">
+
 The minor error was adding the rotary encoder at the end. This was mostly because I decided to add it on a few weeks after finishing the build. In retrospect I should have installed it prior to soldering in the switches as adding it at the end left me little wiggle room when trying to get the pins all aligned and wired up.
 
 I was able to get it in place by first straightening out the three pins on the encoder and soldering on three wires to them. I then fed those wires down through the switch plate and around the bottom of the PCB (see the close up photo below).
@@ -65,7 +69,7 @@ After getting everything set, I realized the case wouldn't quite close over the 
 
 Final wiring | Dremeled-out spacing for wires
 ------------------|----------------------------
-<img src="https://github.com/jhelvy/iris/raw/master/build_log/img-build/14-rotary_wiring2.jpg" width="400"> | <img src="https://github.com/jhelvy/iris/raw/master/build_log/img-build/16-dremel.jpg" width="400">
+<img src="https://github.com/jhelvy/iris/raw/master/build_log/img-build/14-rotary_wiring2.jpg" width="400"> | <img src="https://github.com/jhelvy/iris/raw/master/build_log/img-build/15-dremel.jpg" width="400">
 
 
 
