@@ -29,6 +29,8 @@ Since the back pieces were black plastic and therefore the stain color wouldn't 
 
 <img src="https://github.com/jhelvy/iris/raw/master/build_log/img/5-painted_back.jpg" width="400">
 
+Finally, I sealed all the parts using a water-based [Polycrylic by Minwax](https://www.amazon.com/Minwax-33333000-Water-Based-Polycrylic-Aerosol/dp/B004BPZV4A). This gave everything a smooth feel.
+
 The final product came out okay, though the stained parts look more like a leather than wood IMO. Despite the backs looking like Altoid cans, the overall aesthetic is somewhat steampunk-esqe.
 
 Final pieces | Final case assembled
