@@ -9,4 +9,4 @@ Build log, photo gallery, and keymap of my Iris keyboard (a.k.a. the "Altoids Ca
 
 This is the keymap for this board:
 
-<img src="https://github.com/jhelvy/iris/raw/master/keymap/keymap/keebio_iris_rev2_jhelvy.png" width="800">
+<img src="https://github.com/jhelvy/iris/raw/master/keymap/keebio_iris_rev2_jhelvy.png" width="800">
