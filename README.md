@@ -1,15 +1,12 @@
 # iris
 
-Build log and keymap of my Iris keyboard (a.k.a. the "Altoids Can")
+Build log, photo gallery, and keymap of my Iris keyboard (a.k.a. the "Altoids Can"). Follow the links below to view each section:
 
-# Build log
+- [Build log](https://github.com/jhelvy/iris/tree/master/build_log)
+- [Photo gallery](https://github.com/jhelvy/iris/tree/master/photo_gallery)
 
-To view the build log, navigate to the [build_log](https://github.com/jhelvy/iris/tree/master/build_log) folder
-
-# Key map
+# Keymap
 
 This is the keymap for this board:
 
-<img src="https://github.com/jhelvy/iris/raw/master/keebio_iris_rev2_jhelvy.png" width="800">
-
-
+<img src="https://github.com/jhelvy/iris/raw/master/keymap/keymap/keebio_iris_rev2_jhelvy.png" width="800">

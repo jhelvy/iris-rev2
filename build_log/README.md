@@ -11,29 +11,29 @@
 
 Here are the parts that came in the kit from Keebio:
 
-<img src="https://github.com/jhelvy/iris/raw/master/build_log/img-build/1-kit.jpg" width="400">
+<img src="https://github.com/jhelvy/iris/raw/master/build_log/img/1-kit.jpg" width="400">
 
 # The case
 
-The case was 3D printed using [these Iris case files](https://github.com/wizarddata/Iris-Case/tree/master/High%20Profile) by [wizarddata](https://github.com/wizarddata) (thanks for making these available!). The parts were printed at at the [GWU Innovation Center](https://innovation.gwu.edu/gw-innovation-center) (shout out to Konstantin Mitic for all the help with this!).
+The case was 3D printed using [these Iris case files](https://github.com/wizarddata/Iris-Case/tree/master/High%20Profile) by [wizarddata](https://github.com/wizarddata) (thanks for making these available!). I've copied the same files into the [iris_case_files](https://github.com/jhelvy/iris/tree/master/build_log/iris_case_files) folder in this repo. The parts were printed at at the [GWU Innovation Center](https://innovation.gwu.edu/gw-innovation-center) (shout out to Konstantin Mitic for all the help with this!).
 
-<img src="https://github.com/jhelvy/iris/raw/master/build_log/img-build/2-printed_pieces.jpg" width="400">
+<img src="https://github.com/jhelvy/iris/raw/master/build_log/img/2-printed_pieces.jpg" width="400">
 
 After printing the parts, I tried to create a "wood"-like look for the top pieces by attempting to stain them (staining plastic is tricky, but do-able). I started by coating the parts in a black stain to try and build some variation in the main color. After that dried (about 24 hours later), I coated the parts again in a stain-polyurethane blend by Midwax (I used [Olde Maple(https://www.minwax.com/wood-products/one-step-stain-and-finishes/minwax-polyshades)]). The polyurethane in the blend helped keep the color in place as it all dried.
 
 Black stain layer | Stain-polyurethane coating
 ------------------|----------------------------
-<img src="https://github.com/jhelvy/iris/raw/master/build_log/img-build/3-painting1.jpg" width="400"> | <img src="https://github.com/jhelvy/iris/raw/master/build_log/img-build/4-painting2.jpg" width="400">
+<img src="https://github.com/jhelvy/iris/raw/master/build_log/img/3-painting1.jpg" width="400"> | <img src="https://github.com/jhelvy/iris/raw/master/build_log/img/4-painting2.jpg" width="400">
 
 Since the back pieces were black plastic and therefore the stain color wouldn't work, I attempted to give them a metallic look by spray painting them with a silver colored ["Hammered Spray Paint"](https://www.rustoleum.com/product-catalog/consumer-brands/universal/universal-hammered-spray-paint) by Rust-Oleum.
 
-<img src="https://github.com/jhelvy/iris/raw/master/build_log/img-build/5-painted_back.jpg" width="400">
+<img src="https://github.com/jhelvy/iris/raw/master/build_log/img/5-painted_back.jpg" width="400">
 
 The final product came out okay, though the stained parts look more like a leather than wood IMO. Despite the backs looking like Altoid cans, the overall aesthetic is somewhat steampunk-esqe.
 
 Final pieces | Final case assembled
 ------------------|----------------------------
-<img src="https://github.com/jhelvy/iris/raw/master/build_log/img-build/6-painted_pieces.jpg" width="400"> | <img src="https://github.com/jhelvy/iris/raw/master/build_log/img-build/7-painted_top.jpg" width="400">
+<img src="https://github.com/jhelvy/iris/raw/master/build_log/img/6-painted_pieces.jpg" width="400"> | <img src="https://github.com/jhelvy/iris/raw/master/build_log/img/7-painted_top.jpg" width="400">
 
 # Assembly
 
@@ -45,11 +45,11 @@ Here's where I made the major error - I went straight to soldering the switches.
 
 Major error | Switches soldered in place
 ------------------|----------------------------
-<img src="https://github.com/jhelvy/iris/raw/master/build_log/img-build/8-switches1.jpg" width="400"> | <img src="https://github.com/jhelvy/iris/raw/master/build_log/img-build/9-switches2.jpg" width="400">
+<img src="https://github.com/jhelvy/iris/raw/master/build_log/img/8-switches1.jpg" width="400"> | <img src="https://github.com/jhelvy/iris/raw/master/build_log/img/9-switches2.jpg" width="400">
 
 Both sides with soldering all done:
 
-<img src="https://github.com/jhelvy/iris/raw/master/build_log/img-build/finished_soldering.jpg" width="600">
+<img src="https://github.com/jhelvy/iris/raw/master/build_log/img/finished_soldering.jpg" width="600">
 
 The minor error was adding the rotary encoder at the end. This was mostly because I decided to add it on a few weeks after finishing the build. In retrospect I should have installed it prior to soldering in the switches as adding it at the end left me little wiggle room when trying to get the pins all aligned and wired up.
 
@@ -57,20 +57,20 @@ I was able to get it in place by first straightening out the three pins on the e
 
 Rotary encoder | Close up of mounted encoder
 ------------------|----------------------------
-<img src="https://github.com/jhelvy/iris/raw/master/build_log/img-build/10-encoder.jpg" width="400"> | <img src="https://github.com/jhelvy/iris/raw/master/build_log/img-build/11-rotary_mount.jpg" width="400">
+<img src="https://github.com/jhelvy/iris/raw/master/build_log/img/10-encoder.jpg" width="400"> | <img src="https://github.com/jhelvy/iris/raw/master/build_log/img/11-rotary_mount.jpg" width="400">
 
 I then clipped off the two mounting feet on the encoder and soldered the two other encoder leads to the PCB where you would otherwise solder a key switch. This enables me to program a key press when pressing down on the encoder (I use it to trigger "mute"). I added a dab of Gorilla Glue to keep the whole thing nice and set in place. Finally, I soldered the other ends of the wires to the F4, F5, and Ground holes at the top of the PCB.
 
 Gorilla Glue | Soldered wires at top of PCB
 ------------------|----------------------------
-<img src="https://github.com/jhelvy/iris/raw/master/build_log/img-build/12-glue.jpg" width="400"> | <img src="https://github.com/jhelvy/iris/raw/master/build_log/img-build/13-rotary_wiring1.jpg" width="400">
+<img src="https://github.com/jhelvy/iris/raw/master/build_log/img/12-glue.jpg" width="400"> | <img src="https://github.com/jhelvy/iris/raw/master/build_log/img/13-rotary_wiring1.jpg" width="400">
 
 After getting everything set, I realized the case wouldn't quite close over the wires coming off the rotary encoder, so I used a dremel to make some extra space. It looked better once I painted over it again.
 
 Final wiring | Dremeled-out spacing for wires
 ------------------|----------------------------
-<img src="https://github.com/jhelvy/iris/raw/master/build_log/img-build/14-rotary_wiring2.jpg" width="400"> | <img src="https://github.com/jhelvy/iris/raw/master/build_log/img-build/15-dremel.jpg" width="400">
+<img src="https://github.com/jhelvy/iris/raw/master/build_log/img/14-rotary_wiring2.jpg" width="400"> | <img src="https://github.com/jhelvy/iris/raw/master/build_log/img/15-dremel.jpg" width="400">
 
-
+# The Firmware
 
 
