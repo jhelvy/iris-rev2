@@ -61,7 +61,7 @@ Rotary encoder | Close up of mounted encoder
 ------------------|----------------------------
 <img src="https://github.com/jhelvy/iris/raw/master/build_log/img/10-encoder.jpg" width="400"> | <img src="https://github.com/jhelvy/iris/raw/master/build_log/img/11-rotary_mount.jpg" width="400">
 
-I then clipped off the two mounting feet on the encoder and soldered the two other encoder leads to the PCB where you would otherwise solder a key switch. This enables me to program a key press when pressing down on the encoder (I use it to trigger "mute"). I added a dab of Gorilla Glue to keep the whole thing nice and set in place. Finally, I soldered the other ends of the wires to the F4, F5, and Ground holes at the top of the PCB.
+I then clipped off the two mounting feet on the encoder and soldered the two other encoder leads to the PCB where you would otherwise solder a key switch. This enables me to program a key press when pressing down on the encoder (I use it to toggle between layers, which changes the rotary encoder's functionality). I added a dab of Gorilla Glue to keep the whole thing nice and set in place. Finally, I soldered the other ends of the wires to the F4, F5, and Ground holes at the top of the PCB.
 
 Gorilla Glue | Soldered wires at top of PCB
 ------------------|----------------------------
