@@ -7,7 +7,7 @@
 - 53 "Trash Panda" key switches (purchased from someone on Reddit's [mechmarket](https://www.reddit.com/r/mechmarket/))
 - Canvas Ortho Keycap set (purchased from someone on Reddit's [mechmarket](https://www.reddit.com/r/mechmarket/))
 - [TRRS Cable](https://keeb.io/products/trrs-cable?variant=8139444519018)
-- [Magnetic USB Cable](https://www.amazon.com/gp/product/B07QCWMQW9/)
+- [Magnetic USB Cables](https://www.amazon.com/gp/product/B07QCWMQW9/) - these are super nice so you don't accidentally break off the usb connector on your pro-micro!
 
 Here are the parts that came in the kit from Keebio:
 
@@ -75,4 +75,114 @@ Final wiring | Dremeled-out spacing for wires
 
 # The Firmware
 
+I started by following the QMK ["getting started" documentation](https://beta.docs.qmk.fm/newbs/newbs_getting_started) to build the Iris firmware. It's all pretty straightforward and well-documented.
 
+## Keymap settings
+
+Where I made the biggest gains was to use the [QMK Configurator](https://config.qmk.fm/#/keebio/iris/rev2/LAYOUT) for the Keebio Iris Rev 2 to setup most of my keymap. On each layout iteration (I experimented for a while), I downloaded the json file from the configurator, then used that file to create my keymap.c file that goes in my "jhelvy" keymap inside the qmk_firmware folder (qmk_firmware/keyboards/keebio/iris/keymaps/jhelvy/keymap.c). Since the json file is a different format from that in the keymap.c file, I used a simple R script in my [qmkJsonConverter](https://github.com/jhelvy/qmkJsonConverter) repo to convert the json file to a plain .txt file that had the code needed for the keymap.c file. Then I just copy-pasted the code in the .txt file over to the keymap.c file. This allowed me to quickly go back-and-forth between changing my settings on the QMK Configurator and generating the necessary keymap.c file. On each iteration, I then followed the QMK instructions to build the .hex firmware and then flashed it to the Iris using the [QMK Toolbox](https://github.com/qmk/qmk_toolbox/releases).
+
+## Rotary encoder settings
+
+This gave me some trouble until I found this [documentation](http://mysticmixles.com/lily58-pro-documentation/) on configuring the rotary encoder on a Lily58. Turns out it's pretty straightforward - I'll repeat the instructions here.
+
+First, in `rules.mk`, I added `ENCODER_ENABLE = yes`, as well as setting `EXTRAKEY_ENABLE = yes`. The `EXTRAKEY_ENABLE` is necessary if you want to control media keys (e.g. control volume).
+
+Then in the `config.h` add :
+
+```
+#define ENCODERS_PAD_A { F4 }
+#define ENCODERS_PAD_B { F5 }
+#define ENCODER_RESOLUTION 4
+```
+
+This creates one encoder, and assigns the rotation pins to F4 and F5 (which is what the wires from encoder are connected to). 4 is a pretty good resolution.
+
+To configure the encoder to control the volume, put the following code below the function `matrix_init_user` in `keymap.c`:
+
+```
+void encoder_update_user(uint8_t index, bool clockwise) {
+  if (index == 0) {
+    if (clockwise) {
+      tap_code(KC_VOLU);
+    } else {
+      tap_code(KC_VOLD);
+    }
+  }
+}
+```
+
+This tells the encoder to send "volume up" when turned clockwise and "volume down" when turned counter-clockwise.
+
+In my case, I used if-else logic to leverage the different layers to change what the encoder does based on what layer I'm on. Here's my full settings. Note that my settings are reversed (e.g. "clockwise" is volume DOWN not UP) because I think I connected the wires the wrong way...much easier to change the settings than re-wire things :)
+
+```
+void encoder_update_user(uint8_t index, bool clockwise) {
+    if (IS_LAYER_ON(_RAISE)) {
+        if (clockwise) {
+            tap_code(KC_VOLD);
+        } else {
+            tap_code(KC_VOLU);
+        }
+    } else if (IS_LAYER_ON(_LOWER)) {
+        if (clockwise) {
+            register_code(KC_LGUI);
+            tap_code(KC_MINS);
+            unregister_code(KC_LGUI);
+        } else {
+            register_code(KC_LGUI);
+            tap_code(KC_EQL);
+            unregister_code(KC_LGUI);
+        }
+    } else {
+        if (clockwise) {
+            tap_code(KC_PGUP);
+        } else {
+            tap_code(KC_PGDN);
+        }
+    }
+}
+```
+
+The default layer (at the end of the if-else chain) is "page up" and "page down". When on the "RAISE" layer, it controls "volume up" and "volume down". Finally, when on the "LOWER" layer, it sends "Command + Equal" (zoom in) and "Command + Minus" (zoom out). I use the zooming mostly when working with images.
+
+Since the encoder can also be pressed down as a key, I set my keymap for the rotary encoder to toggle between the default layer and the RAISE layer. This way I can quickly toggle between the "page up / down" functionality and the "volume up / down" functionality by simply pressing down on the encoder. To trigger the "zoom" functionality, I hold my left thumb key to switch to the LOWER layer and turn the knob with my right hand.
+
+## Other settings
+
+Since I didn't use the RGB lighting (my casing is completely enclosed anyway), I turned that feature off to save space in my `rules.mk`:
+
+```
+RGBLIGHT_ENABLE = no
+BACKLIGHT_ENABLE = no
+```
+
+I also really like the [Autoshift feature](https://beta.docs.qmk.fm/features/feature_auto_shift), so I turned that on in `rules.mk`:
+
+```
+AUTO_SHIFT_ENABLE = yes  # Autoshift by holding down a key
+```
+
+I also modified the specific settings for the autoshift in the `config.h` file:
+
+```
+#define TAPPING_FORCE_HOLD
+#undef TAPPING_TERM
+#define TAPPING_TERM 200
+#define AUTO_SHIFT_TIMEOUT 150
+```
+
+Finally, as noted above, to get the rotary encoder working I had to enable that feature (with the EXTRAKEY_ENABLE to control volume):
+
+```
+ENCODER_ENABLE = yes
+EXTRAKEY_ENABLE = yes
+```
+
+**Important**: One slightly annoying feature with this setup is that the rotary encoder is only supported on the **master** side, and since I put the encoder on my right hand, I had to make that side the master by changing the setting in the `config.h` file:
+
+```
+// Had to swap the master to get the right-side rotary encoder supported
+#define MASTER_RIGHT
+```
+
+Unfortunately, I only learned this later after soldering my pro-micros in place. I had intended up use the elite c pro micro for the master side, which I put on the left side. So now I've got a really nice elite c on the slave side...whatever, it works.
