@@ -1,3 +1,13 @@
+# Navigation
+
+- [Parts list](#parts-list)
+- [The case](#the-case)
+- [Assembly](#assembly)
+- [The Firmware](#the-firmware)
+  - [Keymap settings](#keymap-settings)
+  - [Rotary encoder settings](#rotary-encoder-settings)
+  - [Other settings](#other-settings)
+
 # Parts list
 
 - [Iris Rev 2 PCBs](https://keeb.io/collections/keyboard-pcbs/products/iris-keyboard-split-ergonomic-keyboard) (Only Rev 4 is available now)
