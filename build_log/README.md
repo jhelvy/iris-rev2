@@ -123,7 +123,7 @@ void encoder_update_user(uint8_t index, bool clockwise) {
 
 This tells the encoder to send "volume up" when turned clockwise and "volume down" when turned counter-clockwise.
 
-In my case, I used if-else logic to leverage the different layers to change what the encoder does based on what layer I'm on. Here's my full settings. Note that my settings are reversed (e.g. "clockwise" is volume DOWN not UP) because I think I connected the wires the wrong way...much easier to change the settings than re-wire things :)
+In my case, I used if-else conditionals to change what the encoder does based on what layer I'm on. Here's my full settings. Note: my settings are reversed (e.g. "clockwise" is volume DOWN not UP) because I think I connected the wires the wrong way...much easier to change the settings than re-wire things :)
 
 ```
 void encoder_update_user(uint8_t index, bool clockwise) {
@@ -153,9 +153,7 @@ void encoder_update_user(uint8_t index, bool clockwise) {
 }
 ```
 
-The default layer (at the end of the if-else chain) is "page up" and "page down". When on the "RAISE" layer, it controls "volume up" and "volume down". Finally, when on the "LOWER" layer, it sends "Command + Equal" (zoom in) and "Command + Minus" (zoom out). I use the zooming mostly when working with images.
-
-Since the encoder can also be pressed down as a key, I set my keymap for the rotary encoder to toggle between the default layer and the RAISE layer. This way I can quickly toggle between the "page up / down" functionality and the "volume up / down" functionality by simply pressing down on the encoder. To trigger the "zoom" functionality, I hold my left thumb key to switch to the LOWER layer and turn the knob with my right hand.
+Here's what that code does. The default layer is "page up" (CW) and "page down" (CCW). When I press down on the encoder, it toggles to the "RAISE" layer and then becomes "volume up" (CW) and "volume down" (CCW). Finally, when on the "LOWER" layer (which I trigger with my left thumb key), it sends "Command + Equal" to zoom in (CW) and "Command + Minus" to zoom out (CCW). I use the zooming mostly when working with images, like in photoshop. I'm going to add one more layer next so that I can also toggle to a fourth layer to mouse scroll right (CW) and left (CCW), again also useful when working with images. The only thing not in the code above is the control to get the keypress on the rotary encoder to toggle between layers, which is set in the `keymap.c` file.
 
 ## Other settings
 
