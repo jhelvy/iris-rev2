@@ -37,4 +37,8 @@ Below is my current keymap for this board. There are 4 layers:
 
 - Mouse keys on the right hand
 
+**Layer 4**
+
+- Number pad on the right hand
+
 <img src="https://github.com/jhelvy/iris/raw/master/keymap/keebio_iris_rev2_jhelvy.png" width="800">
